@@ -1,1 +1,120 @@
 /* Your SCSS here. */
+$brand-bg: #1f2937;
+$accent: #9ce6ff;
+$text: #ffffff;
+$nav-large-padding: 20px;
+$nav-small-padding: 8px;
+$nav-large-font: 1.25rem;
+$nav-small-font: 0.95rem;
+$transition: 250ms ease;
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; } // smooth scrolling requirement
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: $text;
+  background: #f4f5f7;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  /* position: sticky;
+  top: 0;
+  z-index: 1000; */
+  width: 100%;
+  /*background: rgba(171, 204, 250, 0.95);
+  backdrop-filter: blur(4px); */
+  transition: padding $transition, font-size $transition, box-shadow $transition;
+
+  &.large {
+    padding: $nav-large-padding 0;
+    font-size: $nav-large-font;
+    box-shadow: none;
+  }
+
+  &.small {
+    padding: $nav-small-padding 0;
+    font-size: $nav-small-font;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  }
+    .navlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include center-flex;
+    gap: 2.25rem;
+
+    li {
+      a.navlink {
+        color: $text;
+        text-decoration: none;
+        font-weight: 600;
+        position: relative;
+        padding: 6px;
+        transition: color 150ms, transform 150ms;
+
+        &:hover {
+          color: $accent;
+          transform: translateY(-1px);
+        }
+
+        &.active::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -8px;
+          height: 3px;
+          background: $accent;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------- Page stripes (sections) ---------- */
+.stripe {
+  width: 100%;
+  min-height: 100vh; 
+  @include center-flex;
+  text-align: center;
+  font-size: 2rem;
+  color: #0b1220;
+  padding: 6rem 2rem; 
+}
+
+
+#home { background: linear-gradient(180deg, #fde2e2, #ffdede); }
+#about { background: linear-gradient(180deg, #e6f7f4, #d7f0ec); }
+#features { background: linear-gradient(180deg, #fff4e6, #fff0d1); }
+#gallery { background: linear-gradient(180deg, #e8ecff, #dfe6ff); }
+#contact { background: linear-gradient(180deg, #f0e9ff, #e7dfff); }
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(171, 204, 250, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+/* footer */
+.footer {
+  @include center-flex;
+  padding: 2rem;
+  background: #111827;
+  color: $text;
+}
+
+/* Accessibility: ensure focus ring visible on keyboard nav */
+.nav__link:focus {
+  outline: 3px dashed rgba(255,152,0,0.35);
+  outline-offset: 4px;
+}

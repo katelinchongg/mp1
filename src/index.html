@@ -9,20 +9,23 @@
     </head>
     <body>
         <header class="large" id="navbar">
-            <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#gallery">gallery</a>
-            <a href="#contact">Contact</a>
+            <nav class="navbar">
+                <ul class="navlist">
+                    <li><a class="navlink active" href="#home">Home</a></li>
+                    <li><a class="navlink" href="#about">About</a></li>
+                    <li><a class="navlink" href="#resume">Resume</a></li>
+                    <li><a class="navlink" href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </header>
+        <main>
 
-        <section id="home">Home Section</section>
-        <section id="about">About Section</section>
-        <section id="gallery">gallery Section</section>
-        <section id="contact">Contact Section</section>
-
-       
+        <section id="home" class="stripe">Home Section</section>
+        <section id="about" class="stripe">About Section</section>
+        <section id="resume" class="stripe">Resume Section</section>
+        <section id="contact" class="stripe">Contact Section</section>
+        </main>
 
     </body>
+    <script src="js/main.js"></script>
 </html>
