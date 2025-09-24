@@ -368,7 +368,7 @@ body.modal-open {
 }
 .social-icons a {
   font-size: 2rem;
-  color: #005e7d;
+  color: #004b64;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .social-icons a:hover {
@@ -379,7 +379,7 @@ body.modal-open {
 #contactme .social-icons i {
   font-size: 5rem;
   margin: 0 300px;
-  color: #4d94ac;
+  color: #00526e;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 #contactme .social-icons i:hover {
