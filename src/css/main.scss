@@ -369,6 +369,7 @@ body.modal-open {
     transform: scale(1.2); // subtle grow on hover
   }
 }
+
 .social-icons {
   margin-top: 1.5rem;
   display: flex;
@@ -377,12 +378,23 @@ body.modal-open {
 
   a {
     font-size: 2rem;
-    color: $text;
+    color: #005e7d; // default icon color
     transition: color 0.3s ease, transform 0.3s ease;
 
     &:hover {
       color: $accent;
       transform: scale(1.2);
     }
+  }
+}
+
+#contactme .social-icons i {
+  font-size: 5rem;   // bigger size (default ~1rem)
+  margin: 0 300px;      // spacing between icons
+  color: #4d94ac;      // or any color you want
+  transition: transform 0.3s ease, color 0.3s ease;
+  &:hover {
+    transform: scale(1.2); // grows slightly when hovered
+    color: lighten(#9ce6ff, 15%);
   }
 }
