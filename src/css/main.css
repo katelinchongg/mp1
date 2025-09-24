@@ -364,7 +364,7 @@ body.modal-open {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 20rem;
 }
 .social-icons a {
   font-size: 2rem;
