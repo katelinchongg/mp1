@@ -360,4 +360,20 @@ body.modal-open {
   transform: scale(1.2);
 }
 
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icons a {
+  font-size: 2rem;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons a:hover {
+  color: #9ce6ff;
+  transform: scale(1.2);
+}
+
 /*# sourceMappingURL=main.css.map */
