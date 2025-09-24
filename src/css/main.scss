@@ -374,7 +374,7 @@ body.modal-open {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3rem;
 
   a {
     font-size: 2rem;
@@ -390,7 +390,7 @@ body.modal-open {
 
 #contactme .social-icons i {
   font-size: 5rem;   // bigger size (default ~1rem)
-  margin: 0 250px;      // spacing between icons
+ // margin: 0 250px;      // spacing between icons
   color: #00526e;      // or any color you want
   transition: transform 0.3s ease, color 0.3s ease;
   &:hover {

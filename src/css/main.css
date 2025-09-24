@@ -364,7 +364,7 @@ body.modal-open {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 .social-icons a {
   font-size: 2rem;
@@ -378,7 +378,6 @@ body.modal-open {
 
 #contactme .social-icons i {
   font-size: 5rem;
-  margin: 0 250px;
   color: #00526e;
   transition: transform 0.3s ease, color 0.3s ease;
 }
