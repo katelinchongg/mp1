@@ -18,7 +18,7 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main> 
 
             <section id="home" class="stripe">
 
@@ -59,8 +59,47 @@
             <section id="resume" class="stripe">
                 <div class="content">
                     <h2>My Professional Work</h2>
-                    <p></p>
+                    <p>Here is some information about my professional work.</p>
+                    <div class="work-item">
+                        <h3>Rockwell Automation</h3>
+                        <button class="open-modal" data-modal="modal1">View Details</button>
+                    </div>
+
+                    <div class="work-item">
+                        <h3>Department of Aerospace Engineering</h3>
+                        <button class="open-modal" data-modal="modal2">View Details</button>
+                    </div>
+                    <div class="work-item">
+                        <h3>AbbVie</h3>
+                        <button class="open-modal" data-modal="modal3">View Details</button>
+                    </div>
                 </div>
+            </section>
+
+                    <!-- Modals -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Rockwell Automation</h3>
+                    <p>Throughout the summer of 2024, I worked as a Customer Success Enablement Project Management Intern for Rockwell Automation. There, I was able to create and implement new hire training for several data reports using the platform Rise360.</p>
+                </div>
+            </div>
+
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Department of Aerospace Engineering</h3>
+                    <p>I have been working as the Communications Intern for the Department of Aerospace Engineering here at the University of Illinois at Urbana-Champaign since my freshman year of college. I have conducted numerous interviews and written stories on both AE students and faculty, capturing the lengths of their experiences and contributions to the field. </p>
+                </div>
+            </div>
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>AbbVie</h3>
+                    <p>Currently, I am working with AbbVie through HireGenics as a Communications Specialist student. Since March, I have written several articles on student and employee success at AbbVie due to their student program. My main project over the summer was to help write the 10 year in review magazine for the student program, highlighting the broad range of projects students have completed throughout the past ten years.</p>
+                </div>
+            </div>
             </section>
             <section id="contactme" class="stripe">
                 <div class="content">
@@ -69,7 +108,7 @@
                 </div>
             </section>
         </main>
-
-    </body>
     <script src="js/main.js"></script>
+</body>
+    
 </html>

@@ -102,24 +102,43 @@
       updateCarousel();
     });
   }
+
+    document.querySelectorAll(".open-modal").forEach(button => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      modal.classList.add("active");
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  document.querySelectorAll(".modal .close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      const modal = closeBtn.closest(".modal");
+      modal.classList.remove("active");
+      document.body.classList.remove("modal-open");
+    });
+  });
+
+  // Close modal when clicking outside content
+  window.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal")) {
+      e.target.classList.remove("active");
+      document.body.classList.remove("modal-open");
+    }
+  });
   const animatedSections = document.querySelectorAll('.stripe .content');
 
-// 2. Set up the Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-    // Loop over the entries
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      // If the element is visible
       if (entry.isIntersecting) {
-        // Add the '.is-visible' class
         entry.target.classList.add('is-visible');
       }
     });
-  }, {
-    threshold: 0.1 // Trigger when 10% of the element is visible
-  });
+  }, { threshold: 0.1 });
 
-  // 3. Tell the observer to watch each of your sections
   animatedSections.forEach(section => {
     observer.observe(section);
   });
+
 })();
